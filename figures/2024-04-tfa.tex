@@ -1,0 +1,12 @@
+\begin{tikzpicture}
+    \node[anchor=south east] at (-1,0) (ina) {\input{../figures/2024-04-lb-1.tex}};
+    \node[anchor=south west] at (1,0) (inb) {\input{../figures/2024-04-lb-2.tex}};
+    \node[orange, rounded corners=0.5cm, fit={(ina)}, draw, line width=1.5pt] (a) {};
+    \node[orange, rounded corners=0.5cm, fit={(inb)}, draw, line width=1.5pt] (b) {};
+    \node at (0,-1) (sum) {\Huge ${\boldsymbol{\oplus}}$};
+    \draw[-latex, line width=1.5pt, shorten >= 0.3cm] (a) -- (sum.center);
+    \draw[-latex, line width=1.5pt, shorten >= 0.3cm] (b) -- (sum.center);
+    \draw[-latex, line width=1.5pt, shorten <= 0.3cm] (sum.center) -- ++(0,-3);
+
+    \node[anchor=north] at (0,-2) (compute) {\input{../figures/2024-04-tfa-compute.tex}};
+\end{tikzpicture}

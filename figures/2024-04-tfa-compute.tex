@@ -1,0 +1,33 @@
+% !TeX spellcheck = en_US
+% !TeX program = lualatex
+% !TeX root = ludovic
+\begin{tikzpicture}[anchor=center]
+	\pgfplotsset{ticks=none}
+	\begin{axis}[
+		xlabel=t,
+		xmin=-2,
+		xmax=6,
+		ymin=-2,
+		ymax=12,
+		axis lines=center,
+		width=14cm,
+		height=8cm
+	]
+	\tikzstyle{ma} = [
+        shorten >=-3.5pt,
+        shorten <=-3.5pt
+    ]
+	\node[anchor=north east] at (axis cs:0,15) {data};
+	\addplot[{Circle[open]}-, ma, domain=0:6, color=orange, line width=1.5pt]{0.5*x+3+0.75*x+2.5} node[left, pos=0]{$b_{f,A'}+b_{h,E'}$}  node[above, pos=0.5, sloped]{rate $r_f+r_h$} node[pos=0.7,below,sloped]{$\alpha_{f,A'}+\alpha_{h,E'}$};
+	\addplot[-Circle, ma, domain=-2:0, color=orange, line width=1.5pt]{0};
+
+
+    \addplot[domain=1:6, color=OliveGreen]{2*x-2} node[below, pos=0]{$T_B$} node[below,pos=0.6,sloped]{rate $R_B$} node[pos=0.9,above,sloped] {$\beta_{B}$};
+	\addplot[domain=-2:1, color=OliveGreen]{0};
+
+	\draw[latex-latex, red] (axis cs:0,5.5) -- (axis cs:3.75,5.5) node[pos=0.5, above] {\makecell{$D_B$}};
+
+
+	
+\end{axis}
+\end{tikzpicture}
