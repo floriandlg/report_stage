@@ -22,4 +22,5 @@
 \contentsline {section}{\numberline {5.1}Méthode de calcul avec TFA++}{20}{section.5.1}%
 \contentsline {section}{\numberline {5.2}Implémentation de TFA ++}{22}{section.5.2}%
 \contentsline {section}{\numberline {5.3}Performances de TFA++}{23}{section.5.3}%
-\contentsline {chapter}{\numberline {6}Conclusion}{24}{chapter.6}%
+\contentsline {chapter}{\numberline {6}Observations}{24}{chapter.6}%
+\contentsline {chapter}{\numberline {7}Conclusion}{25}{chapter.7}%

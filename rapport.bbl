@@ -16,5 +16,160 @@
   {}
 \endgroup
 
+
+\refsection{0}
+  \datalist[entry]{none/global//global/global/global}
+    \entry{docquierDeterminingTightWorstcase2020}{inproceedings}{}{}
+      \name{author}{5}{}{%
+        {{hash=bdfd3b9f5d7de9241cc5841089e5b7de}{%
+           family={Docquier},
+           familyi={D\bibinitperiod},
+           given={Théo},
+           giveni={T\bibinitperiod}}}%
+        {{hash=70346ec5e1155da02b82efede216d6b6}{%
+           family={Song},
+           familyi={S\bibinitperiod},
+           given={Ye-Qiong},
+           giveni={Y\bibinithyphendelim Q\bibinitperiod}}}%
+        {{hash=398f3428ab316797a9a0a897096949db}{%
+           family={Chevrier},
+           familyi={C\bibinitperiod},
+           given={Vincent},
+           giveni={V\bibinitperiod}}}%
+        {{hash=5c8641a10a53228dc5d401243918a155}{%
+           family={Pontnau},
+           familyi={P\bibinitperiod},
+           given={Ludovic},
+           giveni={L\bibinitperiod}}}%
+        {{hash=8ee9950a6ee193b916f3ac6dcc086a77}{%
+           family={{Ahmed-Nacer}},
+           familyi={A\bibinitperiod},
+           given={Abdelaziz},
+           giveni={A\bibinitperiod}}}%
+      }
+      \list{location}{1}{%
+        {Sydney, Australia}%
+      }
+      \strng{namehash}{0de3ff452bd0c75c6df4e99d5cf24d98}
+      \strng{fullhash}{253d35da943bdcb9d876d25f8c4caab1}
+      \strng{fullhashraw}{253d35da943bdcb9d876d25f8c4caab1}
+      \strng{bibnamehash}{253d35da943bdcb9d876d25f8c4caab1}
+      \strng{authorbibnamehash}{253d35da943bdcb9d876d25f8c4caab1}
+      \strng{authornamehash}{0de3ff452bd0c75c6df4e99d5cf24d98}
+      \strng{authorfullhash}{253d35da943bdcb9d876d25f8c4caab1}
+      \strng{authorfullhashraw}{253d35da943bdcb9d876d25f8c4caab1}
+      \field{sortinit}{1}
+      \field{sortinithash}{4f6aaa89bab872aa0999fec09ff8e98a}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{booktitle}{45th {{IEEE Conference}} on {{Local Computer Networks}} ({{LCN}})}
+      \field{month}{11}
+      \field{note}{\url{https://hal.archives-ouvertes.fr/hal-02971311}}
+      \field{title}{Determining a Tight Worst-Case Delay of Switched {{Ethernet}} Network in {{IEC}} 61850 Architectures}
+      \field{urlday}{30}
+      \field{urlmonth}{11}
+      \field{urlyear}{2022}
+      \field{year}{2020}
+      \field{urldateera}{ce}
+      \keyw{IEC 61850,Index Terms-switched Ethernet,real-time,smart grid,Strict-Priority,worst-case delay analy- sis}
+    \endentry
+    \entry{docquierMethodologiesPourLevaluation2021}{thesis}{}{}
+      \name{author}{1}{}{%
+        {{hash=bdfd3b9f5d7de9241cc5841089e5b7de}{%
+           family={Docquier},
+           familyi={D\bibinitperiod},
+           given={Théo},
+           giveni={T\bibinitperiod}}}%
+      }
+      \list{institution}{1}{%
+        {Université de Lorraine}%
+      }
+      \strng{namehash}{bdfd3b9f5d7de9241cc5841089e5b7de}
+      \strng{fullhash}{bdfd3b9f5d7de9241cc5841089e5b7de}
+      \strng{fullhashraw}{bdfd3b9f5d7de9241cc5841089e5b7de}
+      \strng{bibnamehash}{bdfd3b9f5d7de9241cc5841089e5b7de}
+      \strng{authorbibnamehash}{bdfd3b9f5d7de9241cc5841089e5b7de}
+      \strng{authornamehash}{bdfd3b9f5d7de9241cc5841089e5b7de}
+      \strng{authorfullhash}{bdfd3b9f5d7de9241cc5841089e5b7de}
+      \strng{authorfullhashraw}{bdfd3b9f5d7de9241cc5841089e5b7de}
+      \field{sortinit}{2}
+      \field{sortinithash}{8b555b3791beccb63322c22f3320aa9a}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{month}{11}
+      \field{note}{\url{https://hal.archives-ouvertes.fr/tel-03572299}}
+      \field{number}{2021LORR0360}
+      \field{title}{Méthodologies Pour l'évaluation de Performances d'architectures Réseaux Smart Grids}
+      \field{type}{Theses}
+      \field{urlday}{30}
+      \field{urlmonth}{11}
+      \field{urlyear}{2022}
+      \field{year}{2021}
+      \field{urldateera}{ce}
+      \keyw{Analytic modeling,Co-simulation,Cosimulation,Evaluation de performances,IEC 61850,Methodes analytiques,Modeling,Modelisation,Networks,Performance evaluation,Real TIme,Real Time network,Reseaux,Reseaux electriques intelligents,Reseaux Temps Reel,Simulation,Smart grids,Temps Reel,TSN}
+    \endentry
+    \entry{leboudec2001network}{book}{}{}
+      \name{author}{2}{}{%
+        {{hash=8a1fe916992771c26b31be19071c82b2}{%
+           family={Boudec},
+           familyi={B\bibinitperiod},
+           given={Jean-Yves\bibnamedelima Le},
+           giveni={J\bibinithyphendelim Y\bibinitperiod\bibinitdelim L\bibinitperiod}}}%
+        {{hash=6610088e498e07abe7e8572638dd6920}{%
+           family={Thiran},
+           familyi={T\bibinitperiod},
+           given={Patrick},
+           giveni={P\bibinitperiod}}}%
+      }
+      \list{publisher}{1}{%
+        {Springer}%
+      }
+      \strng{namehash}{b84728984727305c96586fece1a2d1ec}
+      \strng{fullhash}{b84728984727305c96586fece1a2d1ec}
+      \strng{fullhashraw}{b84728984727305c96586fece1a2d1ec}
+      \strng{bibnamehash}{b84728984727305c96586fece1a2d1ec}
+      \strng{authorbibnamehash}{b84728984727305c96586fece1a2d1ec}
+      \strng{authornamehash}{b84728984727305c96586fece1a2d1ec}
+      \strng{authorfullhash}{b84728984727305c96586fece1a2d1ec}
+      \strng{authorfullhashraw}{b84728984727305c96586fece1a2d1ec}
+      \field{sortinit}{3}
+      \field{sortinithash}{ad6fe7482ffbd7b9f99c9e8b5dccd3d7}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{note}{\url{https://leboudec.github.io/netcal/latex/netCalBook.pdf}}
+      \field{title}{Network Calculus: A Theory of Deterministic Queuing Systems for the Internet}
+      \field{year}{2001}
+    \endentry
+    \entry{thomas2025rtfa}{report}{}{}
+      \name{author}{1}{}{%
+        {{hash=4085565dc41ce36aa40395ba58e7d8b0}{%
+           family={Thomas},
+           familyi={T\bibinitperiod},
+           given={Ludovic},
+           giveni={L\bibinitperiod}}}%
+      }
+      \list{institution}{1}{%
+        {Inria}%
+      }
+      \strng{namehash}{4085565dc41ce36aa40395ba58e7d8b0}
+      \strng{fullhash}{4085565dc41ce36aa40395ba58e7d8b0}
+      \strng{fullhashraw}{4085565dc41ce36aa40395ba58e7d8b0}
+      \strng{bibnamehash}{4085565dc41ce36aa40395ba58e7d8b0}
+      \strng{authorbibnamehash}{4085565dc41ce36aa40395ba58e7d8b0}
+      \strng{authornamehash}{4085565dc41ce36aa40395ba58e7d8b0}
+      \strng{authorfullhash}{4085565dc41ce36aa40395ba58e7d8b0}
+      \strng{authorfullhashraw}{4085565dc41ce36aa40395ba58e7d8b0}
+      \field{sortinit}{4}
+      \field{sortinithash}{9381316451d1b9788675a07e972a12a7}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{note}{Draft report}
+      \field{title}{{rTFA -- Routing with TFA}}
+      \field{type}{Technical Report}
+      \field{version}{Version: 2025-03-25}
+      \field{year}{2025}
+    \endentry
+  \enddatalist
+\endrefsection
 \endinput
 

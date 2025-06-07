@@ -83,7 +83,7 @@
 
 % --------- Bibliographie ---------
 \usepackage[backend=biber,style=ieee]{biblatex}
-\addbibresource{bibliographie.bib} % ton fichier .bib
+\addbibresource{references.bib} % ton fichier .bib
 
 \begin{document}
 \pagenumbering{gobble}
@@ -195,27 +195,36 @@ délais garantis. Un simple retard de quelques millisecondes peut entraîner
 des dysfonctionnements majeurs, voire des situations dangereuses. 
 C'est pour répondre à ces besoins qu'ont été développés les réseaux 
 temps-réels qui visent à offrir des garanties strictes sur la latence 
-maximale des communications.\\
+maximale des communications.
+
+\bigskip
 
 Contrairement aux réseaux classiques de type Internet,
-les réseaux temps-réels doivent fournir des garanties de latence dans le pire cas. Pour cela, des algorithmes comme Total Flow Analysis 
-(TFA) ont été conçus afin d'en calculr des bornes de latence. Ces dernières seront utilisées 
-afin de valider le respect des contraintes.\\
+les réseaux temps-réels doivent fournir des garanties de latence dans le pire cas. 
+Pour cela, des algorithmes comme "Flow aggregation" \cite{docquierDeterminingTightWorstcase2020}\cite{docquierMethodologiesPourLevaluation2021} et les méthodes basées sur "Network Calculus"\cite{leboudec2001network}, dont "Total Flow
+Analysis" (TFA) ont été conçus afin d'en calculer des bornes de latence. Ces dernières seront utilisées 
+afin de valider le respect des contraintes.
+
+\bigskip
 
 Cependant dans des environnements collaboratifs, une nouvelle problématique 
-se pose : comment prouver à l'un que les contraintes de latence sont 
+se pose: comment prouver à l'un que les contraintes de latence sont 
 respectées par l'autre, sans pour autant lui révéler sa configuration interne ? 
-C'est ici qu'intervient une approche innovante issue de la cryptographie : les Zero-Knowledge Proofs 
+C'est ici qu'intervient une approche innovante issue de la cryptographie: les Zero-Knowledge Proofs 
 (ZKP). Ces preuves permettent de démontrer qu'un calcul est correct, 
-sans pour autant exposer les données utilisées pour l'effectuer.\\
+sans pour autant exposer les données utilisées pour l'effectuer.
+
+\bigskip
 
 L'objectif principal de ce stage est d'optimiser un algorithme de calcul de latence 
 afin d'accélérer la génération de ZKP. Ceci reste aujourd'hui 
 très coûteux en temps et en ressources. Il s'agit donc d'identifier les 
 points les plus lents de l'algorithme, et d'explorer des techniques pour rendre le
-processus plus rapide.\\
+processus plus rapide.
 
-Ce travail s'inscrit dans une perspective plus large : rendre les 
+\bigskip
+
+Ce travail s'inscrit dans une perspective plus large: rendre les 
 réseaux temps-réels vérifiables, transparents et fiables à grande échelle, 
 ce qui pourrait faciliter leur adoption dans des domaines industriels ou 
 critiques, où la confiance entre acteurs est primordiale.
@@ -311,6 +320,7 @@ Au cours de mon stage, j'ai rejoint l'équipe SIMBIOT, dont la mission est la co
 Les travaux de l'équipe se concentrent principalement sur les propriétés d'adaptabilité de ces systèmes, tant au niveau du calcul que des communications, dans le but de renforcer leur autonomie.
 
 
+
 % --------- Sujet de stage ---------
 \chapter{Sujet du stage}
 
@@ -336,7 +346,7 @@ L'un des premiers défis de mon stage a été l'étude et la compréhension de l
 \end{itemize}
 
 \begin{algorithm}
-\caption{Algorithme Total Flow Analysis (TFA)}\label{alg:cap}
+\caption{Algorithme Total Flow Analysis (TFA)\\ Travaille réalisé avec Matthieu AMET}\label{alg:cap}
     \begin{algorithmic}[1]
         \For{$c \in [7 \dots 0]$}
             \ForAll{$n \in \mathcal{N}$}
@@ -432,6 +442,8 @@ sans avoir à divulguer une quelconque information sur le réseau utilisé.
 
 Dans un contexte décentralisé, où les acteurs ne se font pas nécessairement confiance, la génération de preuve devient un outil clé pour établir une confiance automatisée et vérifiable.
 
+\bigskip
+
 Imaginons un scénario typique impliquant trois entités:
 \begin{itemize}
     \item \textbf{Le client}, qui souhaite transmettre des données à travers un réseau avec des garanties strictes sur les délais.
@@ -439,13 +451,21 @@ Imaginons un scénario typique impliquant trois entités:
     \item \textbf{La blockchain}, qui héberge une application décentralisée : un contrat intelligent jouant le rôle d'arbitre automatisé.
 \end{itemize}
 
-L'enjeu est simple : comment le client peut-il s'assurer que l'opérateur a bien configuré le réseau de façon à respecter les délais annoncés, sans pour autant avoir accès à tous les détails (souvent confidentiels) de la topologie ou de la charge du réseau?
+\bigskip
+
+L'enjeu est simple: comment le client peut-il s'assurer que l'opérateur a bien configuré le réseau de façon à respecter les délais annoncés, sans pour autant avoir accès à tous les détails (souvent confidentiels) de la topologie ou de la charge du réseau?
 
 \bigskip
 
-\begin{center}
+\begin{figure}[h!]
+  \begin{center}
   \includegraphics[width=0.9\textwidth]{main_cropped.pdf}
-\end{center}
+  \caption{Contexte pour la génération de preuve, travaille réalisé avec Matthieu AMET}
+  \end{center}
+\end{figure}
+
+\break
+
 
 C'est ici que la \textbf{génération de preuve} entre en jeu.
 
@@ -1131,7 +1151,7 @@ clean\_code.csv        &  6158727.40 & 5.19x & 80.72\% \\
 \caption{Résultats de benchmark triés par ordre croissant de réduction des cycles}
 \end{table}
 
-\bigskip
+\smallskip
 
 Ci-dessous un diagramme en 3D mettant en opposition le code initial ainsi
 que le code final afin d'étudier leurs complexités en faisant varier
@@ -1139,7 +1159,7 @@ que le code final afin d'étudier leurs complexités en faisant varier
 
 \begin{figure}[H]
     \centering
-    \includegraphics[width=0.95\textwidth]{benchmark_3D.pdf}
+    \includegraphics[width=0.7\textwidth]{benchmark_3D.pdf}
     \caption{Temps de calcul des bornes de latences selon le nombre de nœuds \textbf{et} le nombre de contrats}
 \end{figure}
 
@@ -1156,7 +1176,7 @@ un par un.
 
 \begin{figure}[H]
     \centering
-    \includegraphics[width=0.4\textwidth]{benchmark_indusnet.pdf}
+    \includegraphics[width=0.8\textwidth]{benchmark_indusnet.pdf}
     \caption{Temps de calcul des bornes de latences sur un réseau industriel, 
     (on observe des pics dans
     les courbes, ce sont des arrondissements de cycles pour la génération de preuves, étant donné qu'elle travail avec des cycles ronds).}
@@ -1240,7 +1260,7 @@ soit envoyé par le nœud.
     \node[anchor=north] at (0,-2) (compute) {\input{./figures/2024-04-tfa-compute.tex}};
 \end{tikzpicture}
 \end{center}
-\caption{Schéma synthétisant le comportement de TFA}
+\caption{Schéma synthétisant le comportement de TFA, issue des travaux de Ludovic THOMAS\cite{thomas2025rtfa}}
 \end{figure}
 
 \break{}
@@ -1271,7 +1291,7 @@ et la courbe de service.
     \node[anchor=north] at (0,-2) (compute) {\input{./figures/2024-04-tfapp-compute.tex}};
 \end{tikzpicture}
 \end{center}
-\caption{Schéma synthétisant le comportement de TFA++}
+\caption{Schéma synthétisant le comportement de TFA++, issue des travaux de Ludovic THOMAS\cite{thomas2025rtfa}}
 \end{figure}
 
 \break{}
@@ -1348,20 +1368,81 @@ où :
 
 \section{Performances de TFA++}
 
+Ci-dessous deux graphiques montrant l'évolution des cycles en fonction des 
+contrats et des noeuds de TFA (courbe rouge) et TFA++ (courbe verte)
+
+\bigskip
+
+\begin{figure}[htbp]
+  \centering
+  \begin{minipage}{0.45\textwidth}
+    \centering
+    \includegraphics[width=\textwidth]{benchmark_tfapp_contracts.pdf}
+    \caption{Évolution du nombre de cycles avec le nombre de contrats fixé.}
+  \end{minipage}
+  \hfill
+  \begin{minipage}{0.45\textwidth}
+    \centering
+    \includegraphics[width=\textwidth]{benchmark_tfapp_nodes.pdf}
+    \caption{Évolution du nombre de cycles avec le nombre de noeuds fixé.}
+  \end{minipage}
+\end{figure}
+
+\bigskip
+
+Comme annoncé, TFA++ est moins performant que TFA, mais cette baisse de vitesse
+d'exécution assure des résultats moins pessimistes concernant les bornes de 
+latence. 
 
 
+%---------- Observations --------
+\chapter{Observations}
+
+Durant les six semaines que j'ai passées au Loria, j'ai intégré l'équipe SIMBIOT. Mon poste s'inscrivait dans un projet de recherche dont l'objectif principal était l'optimisation d'un algorithme appelé Total Flow Analysis (TFA). J'ai également participé à l'implémentation d'une version améliorée de cet algorithme, nommée TFA++, visant à améliorer ses performances en termes de précision.
+
+\bigskip
+
+Ma position au sein de l'équipe était encadrée par un doctorant, Matthieu AMET, avec lequel j'échangeais régulièrement pour faire le point sur l'avancement de mes travaux.  Le laboratoire fonctionnant sur un modèle universitaire et de recherche publique, les rapports hiérarchiques étaient peu contraignants.
+
+\bigskip
+
+Le respect des procédures de développement était essentiel : cela incluait la rigueur dans l'écriture du code, la documentation soignée des travaux réalisés, ainsi que le respect des bonnes pratiques en matière de versionnement. Il m'a été demandé de produire un travail reproductible, compréhensible par d'autres chercheurs, ce qui supposait d'être rigoureux.
+
+\bigskip
+
+Le poste de travail était exclusivement informatique : il s'agissait d'un travail sédentaire, effectué devant un ordinateur. Cela impliquait une attention particulière à la posture et à la prise de pauses régulières pour éviter la fatigue musculaire et oculaire. D'un point de vue mental, l'activité était très exigeante : l'optimisation d'algorithmes implique une forte concentration, et les erreurs possibles sont souvent subtiles, comme des problèmes de performance cachés, des erreurs de logique ou d'implémentation.
+
+\bigskip
+
+Le matériel utilisé était standard pour un environnement de recherche en informatique : un ordinateur avec un environnement Linux, un éditeur de code, ainsi qu'un outil de versionnement comme Git. Le matériel était récent et performant, bien adapté aux tâches que j'avais à réaliser. 
 
 % --------- Conclusion ---------
 \chapter{Conclusion}
-[Bilan, récapitulatif des apports, ouverture.]
 
-[TODO : Citer ludovic sur les captions
-        Travaille réalisé avec Mathieu AMET sur les captions du code
-        Faire Bibliographie
-        Et citer le boss docquier]
+Lors de ces six semaines de stage, j'ai pu découvrir le monde de la recherche dans une équipe très accueillante et à l'écoute de mes questions.
+J'ai pris en main des outils du monde professionnel comme le versionnage avec Git, le développement en Rust, les documentations denses comme celle de RISC Zero. J'ai aussi eu à effectuer mes propres recherches et appris ainsi à stimuler ma curiosité scientifique pour résoudre des problèmes. 
+Tout cela m'a permis de mettre en œuvre les compétences acquises durant mes deux ans au sein de la Prépa des Inp de Nancy, mais aussi en acquérir de nouvelles, dans un cadre appliqué.
 
+\bigskip
+
+Travailler en équipe m'a également beaucoup appris : échanges réguliers, code review,
+entraide technique... J'ai découvert l'importance de bien documenter mon travail, de gar-
+der une trace claire de mes avancées, et l'intérêt d'expliquer mes choix et mes résultats.
+Cette dynamique m'a permis de progresser rapidement mais aussi confortablement en
+sachant qu'a n'importe quel moment, il y avait une personne à qui je pouvais demander
+des explications.
+
+\bigskip
+
+Ce stage a renforcé ma conviction de vouloir m'orienter vers le domaine de l'informatique,
+mais me fait notamment questionner si, à l'avenir, je ne souhaitais finalement pas plutôt
+poursuivre mes études dans la recherche. 
+
+\bigskip
+
+Cette expérience aura donc été très enrichissante pour moi et je remercie encore tout l'équipe SIMBIOT pour cette expérience très formatrice.
 % --------- Bibliographie ---------
-%\printbibliography
+\printbibliography
 
 
 \end{document}
