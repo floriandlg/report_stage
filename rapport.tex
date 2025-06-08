@@ -188,8 +188,7 @@ grande échelle.
 À mesure que la technologie progresse, de plus en plus de systèmes 
 reposent sur des échanges d'informations rapides, fiables et 
 prévisibles. C'est notamment le cas des voitures autonomes,
-des satellites, ou encore des chaînes de 
-production automatisées. Dans ces environnements, il est essentiel que 
+des satellites, ou encore des réseaux électriques \cite{docquierMethodologiesPourLevaluation2021} \cite{docquierDeterminingTightWorstcase2020}. Dans ces environnements, il est essentiel que 
 les données circulent dans des 
 délais garantis. Un simple retard de quelques millisecondes peut entraîner 
 des dysfonctionnements majeurs, voire des situations dangereuses. 
@@ -199,11 +198,9 @@ maximale des communications.
 
 \bigskip
 
-Contrairement aux réseaux classiques de type Internet,
-les réseaux temps-réels doivent fournir des garanties de latence dans le pire cas. 
-Pour cela, des algorithmes comme "Flow aggregation" \cite{docquierDeterminingTightWorstcase2020}\cite{docquierMethodologiesPourLevaluation2021} et les méthodes basées sur "Network Calculus"\cite{leboudec2001network}, dont "Total Flow
-Analysis" (TFA) ont été conçus afin d'en calculer des bornes de latence. Ces dernières seront utilisées 
-afin de valider le respect des contraintes.
+Contrairement aux réseaux classiques comme Internet, les réseaux temps-réel doivent offrir des garanties de latence dans le pire des cas.
+Ces garanties peuvent être obtenues à l'aide d'algorithmes d'analyse tels que "Total Flow Analysis" (TFA) \cite{10.1145/1190095.1190105}, fondé sur le formalisme du "Network Calculus" \cite{leboudec2001network}.
+Ce cadre théorique permet de vérifier le respect des contraintes temporelles imposées à des flux spécifiques.
 
 \bigskip
 
@@ -240,7 +237,7 @@ critiques, où la confiance entre acteurs est primordiale.
 
 Le Loria, \textbf{Laboratoire lorrain de Recherche en Informatique et 
 ses Applications} est une Unité Mixte de Recherche, commune à plusieurs 
-établissements : le CNRS, l'Université de Lorraine, CentraleSupélec et 
+établissements : le CNRS, l'Université de Lorraine, CentraleSupélec et 
 Inria.
 
 Leurs travaux scientifiques sont divisés en thématiques de recherche à travers 
@@ -346,7 +343,7 @@ L'un des premiers défis de mon stage a été l'étude et la compréhension de l
 \end{itemize}
 
 \begin{algorithm}
-\caption{Algorithme Total Flow Analysis (TFA)\\ Travaille réalisé avec Matthieu AMET}\label{alg:cap}
+\caption{Algorithme Total Flow Analysis (TFA)\\ Travail réalisé avec Matthieu AMET}\label{alg:cap}
     \begin{algorithmic}[1]
         \For{$c \in [7 \dots 0]$}
             \ForAll{$n \in \mathcal{N}$}
@@ -460,7 +457,7 @@ L'enjeu est simple: comment le client peut-il s'assurer que l'opérateur a bien 
 \begin{figure}[h!]
   \begin{center}
   \includegraphics[width=0.9\textwidth]{main_cropped.pdf}
-  \caption{Contexte pour la génération de preuve, travaille réalisé avec Matthieu AMET}
+  \caption{Contexte pour la génération de preuve, travail réalisé avec Matthieu AMET}
   \end{center}
 \end{figure}
 
@@ -518,7 +515,7 @@ des performances.
 
 Pour argumenter et discuter des différentes optimisations à réaliser,
 nous allons nous appuyer sur cet outil, mais notamment sur la documentation
-de `Risc Zero' (la machine virtuelle utilisée pour la génération de ZKPs), informant
+de `Risc Zero' \cite{risczero} (la machine virtuelle utilisée pour la génération de ZKPs), informant
 sur des optimisations divergentes des optimisations sur des processeurs d'ordinateur classiques.
 
 \subsection{Conversion des flottants vers des entiers}
@@ -1188,7 +1185,7 @@ un par un.
 \chapter{Ouverture sur l'algorithme TFA++}
 
 Après l'objectif principal du stage qui était d'optimiser la génération de preuves.
-J'ai pu intégrer un deuxième algorithme : TFA++.
+J'ai pu intégrer un deuxième algorithme : TFA++ \cite{mifdaoui:hal-01690096}.
 
 \bigskip
 
@@ -1260,7 +1257,7 @@ soit envoyé par le nœud.
     \node[anchor=north] at (0,-2) (compute) {\input{./figures/2024-04-tfa-compute.tex}};
 \end{tikzpicture}
 \end{center}
-\caption{Schéma synthétisant le comportement de TFA, issue des travaux de Ludovic THOMAS\cite{thomas2025rtfa}}
+\caption{Schéma synthétisant le comportement de TFA, issu des travaux de Ludovic THOMAS\cite{thomas_analyse_2022}}
 \end{figure}
 
 \break{}
